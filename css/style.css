@@ -6,19 +6,26 @@ Dark green: #28b485
 */
 
 /* --------------------------------Universal---------------------------- */
-* {
+*,
+*::after,
+*::before {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
+}
+
+html{
+  font-size: 10px;
 }
 
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.7;
   color: #777;
-  padding: 20px;
+  padding: 2rem;
+  box-sizing: border-box
 }
 
 
@@ -45,12 +52,12 @@ body {
 
 .logo-box {
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 4rem;
+  left: 4rem;
 }
 
 .logo {
-  height: 30px;
+  height: 3rem;
   /* animation-name: moverInRight;
   animation-duration:2s ; */
 }
@@ -68,14 +75,14 @@ body {
   color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden;
-  margin-bottom: 40px;
+  margin-bottom: 4rem;
 }
 .heading-primary-main1{
   display: block;
 
-  font-size: 70px;
+  font-size: 7rem;
   font-weight: 700;
-  letter-spacing: 45px;
+  letter-spacing: 4.5rem;
   text-align: center;
   animation-name: moverInLeft;
   animation-duration: 1s;
@@ -84,9 +91,9 @@ body {
 .heading-primary-main2 {
   display: block;
 
-  font-size: 70px;
+  font-size: 7rem;
   font-weight: 700;
-  letter-spacing: 45px;
+  letter-spacing: 4.5rem;
   text-align: center;
   animation-name: moverInLeft;
   animation-duration: 1s;
@@ -95,9 +102,9 @@ body {
 
 .heading-primary-sub {
   display: block;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 700;
-  letter-spacing: 13px;
+  letter-spacing: 1.3rem;
   text-align: center;
   animation-name: moverInRight;
   animation-duration:2s ;
@@ -108,11 +115,11 @@ body {
 .btn:visited{
   text-transform: uppercase;
   text-decoration: none;
-  padding: 15px 40px;
+  padding: 1.5rem 4rem;
   display: inline-block;
-  border-radius: 100px;
+  border-radius: 10rem;
   transition: all 0.2s;
-  /* box-shadow: 0 10px 20px  rgba(0, 0, 0,0.2); */
+  /* box-shadow: 0 10px 2rem  rgba(0, 0, 0,0.2); */
   position: relative;
   /* animation-name: moverInButtom;
   animation-duration:2.3s; */
@@ -120,12 +127,12 @@ body {
 }
 .btn:hover{
   transform: translateY(-4px);
-  box-shadow: 0 10px 20px  rgba(0, 0, 0,0.5);
+  box-shadow: 0 1rem 2rem  rgba(0, 0, 0,0.5);
 
 }
 .btn:active{
   transform: translateY(-1px);
-  box-shadow: 0 5px 10px  rgba(0, 0, 0,0.2);
+  box-shadow: 0 0.5rem 1rem  rgba(0, 0, 0,0.2);
 
 } 
 .btn-white{
@@ -138,7 +145,7 @@ body {
   display: inline-block;
   height: 100%;
   width: 100%;
-  border-radius: 100px;
+  border-radius: 10rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -173,10 +180,10 @@ body {
 @keyframes moverInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-10rem);
   }
   85%{
-    transform:translateX(20px)
+    transform:translateX(2rem)
   }
 
   100% {
@@ -188,10 +195,10 @@ body {
 @keyframes moverInRight {
   0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(10rem);
   }
   85%{
-    transform:translateX(-10px)
+    transform:translateX(-1rem)
   }
 
   100% {
@@ -203,10 +210,10 @@ body {
 @keyframes moverInButtom {
   0% {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(4rem);
   }
   85%{
-    transform:translateY(-10px)
+    transform:translateY(-1rem)
   }
 
   100% {
