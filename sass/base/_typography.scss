@@ -1,31 +1,51 @@
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: $color-gray-dark;
+  padding: 2rem;
+  
+}
+
+
 .heading-primary {
-  color: white;
+  color: $color-white;
   text-transform: uppercase;
   backface-visibility: hidden;
-  margin-bottom: 4rem; }
-  .heading-primary--main1 {
+  margin-bottom: 4rem;
+
+  &--main1 {
     display: block;
+
     font-size: 7rem;
     font-weight: 700;
     letter-spacing: 4.5rem;
     text-align: center;
     animation-name: moverInLeft;
     animation-duration: 1s;
-    /* animation-timing-function: ease-out; */ }
-  .heading-primary--main2 {
+    /* animation-timing-function: ease-out; */
+  }
+  &--main2 {
     display: block;
+
     font-size: 7rem;
     font-weight: 700;
     letter-spacing: 4.5rem;
     text-align: center;
     animation-name: moverInLeft;
     animation-duration: 1s;
-    /* animation-timing-function: ease-out; */ }
-  .heading-primary--sub {
+    /* animation-timing-function: ease-out; */
+  }
+
+  &--sub {
     display: block;
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1.3rem;
     text-align: center;
     animation-name: moverInRight;
-    animation-duration: 2s; }
+    animation-duration: 2s;
+  }
+}
+
