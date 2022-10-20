@@ -177,3 +177,6 @@ body {
     /* background-color: #$color-gray-dark; */
     transform: translate(-50%, -50%);
     text-align: center; }
+
+.section-about {
+  background-color: #f7f7f7; }
