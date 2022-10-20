@@ -1,5 +1,5 @@
 .header {
-  height: 95vh;
+  height: 95vh; //95% height of the viewport
   background-image: linear-gradient(
       to left bottom,
       rgba($color-primary-light, 0.8),
@@ -9,7 +9,7 @@
   background-size: cover;
   background-position: top;
   position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
   &__logo-box {
     position: absolute;

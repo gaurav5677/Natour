@@ -1,6 +1,6 @@
 .row {
   width: $grid-width;
-  background-color: #eee;
+  // background-color: #eee;
   margin: 0 auto;
   // .row:not()//every thing except last child
   &:not(:last-child) {
@@ -11,7 +11,7 @@
 
   // this is the unique attribute selector with which we call select all the col without creating a seperate class
   [class^="col-"] {
-    background-color: orangered;
+    // background-color: orangered;
     float: left;
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
