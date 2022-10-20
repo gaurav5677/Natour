@@ -1,0 +1,235 @@
+
+/* Sass is css preprocessor , an extenstion of CSS  that adds power and elegance of the basic language */
+
+
+
+/* --------------------------------Universal---------------------------- */
+
+$color-primary:#55c57a;
+$color-primary-light:#7ed56f;
+$color-primary-dark:#28b485;
+$color-white:white;
+$color-gray-dark:#777;
+$color-black:#000;
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html{
+  font-size: 10px;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: $color-gray-dark;
+  padding: 2rem;
+  box-sizing: border-box
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to left bottom,rgba($color-primary-light,0.8),rgba($color-primary-dark,0.8)),
+    url(../images/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 100%);
+}
+
+.header__logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+
+.header__logo {
+  height: 3rem;
+  /* animation-name: moverInRight;
+  animation-duration:2s ; */
+}
+
+.header__text_box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  /* background-color: #$color-gray-dark; */
+  transform: translate(-50%, -50%);
+  text-align: center ;
+}
+
+.heading-primary {
+  color: $color-white;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 4rem;
+}
+.heading-primary--main1{
+  display: block;
+
+  font-size: 7rem;
+  font-weight: 700;
+  letter-spacing: 4.5rem;
+  text-align: center;
+  animation-name: moverInLeft;
+  animation-duration: 1s;
+  /* animation-timing-function: ease-out; */
+}
+.heading-primary--main2 {
+  display: block;
+
+  font-size: 7rem;
+  font-weight: 700;
+  letter-spacing: 4.5rem;
+  text-align: center;
+  animation-name: moverInLeft;
+  animation-duration: 1s;
+  /* animation-timing-function: ease-out; */
+}
+
+.heading-primary--sub {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1.3rem;
+  text-align: center;
+  animation-name: moverInRight;
+  animation-duration:2s ;
+}
+
+
+.btn:link,
+.btn:visited{
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all 0.2s;
+  /* box-shadow: 0 10px 2rem  rgba($color-black,0.2); */
+  position: relative;
+  /* animation-name: moverInButtom;
+  animation-duration:2.3s; */
+  /* -o-animation-delay: 3s; */
+}
+.btn:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 1rem 2rem  rgba($color-black,0.5);
+
+}
+.btn:active{
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem  rgba($color-black,0.2);
+
+} 
+.btn--white{
+  background-color: $color-white;
+  color: $color-gray-dark;
+}
+
+.btn::after{
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+.btn--white::after{
+  background-color:$color-white;
+}
+.btn:hover::after{
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+.btn--animated{
+  animation:  moverInButtom 1.3s ease-out 0.3s;
+  animation-fill-mode: backwards;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes moverInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  85%{
+    transform:translateX(2rem)
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moverInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  85%{
+    transform:translateX(-1rem)
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moverInButtom {
+  0% {
+    opacity: 0;
+    transform: translateY(4rem);
+  }
+  85%{
+    transform:translateY(-1rem)
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
