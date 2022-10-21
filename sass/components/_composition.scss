@@ -1,5 +1,6 @@
 .composition {
   position: relative;
+
   &__photo {
     width: 62%;
     box-shadow: 0 1.5rem 4rem rgba($color-black, $alpha: 0.4);
@@ -13,10 +14,12 @@
       left: -5%;
       top: 20rem;
     }
+
     &--p2 {
       right: 0;
       top: 10rem;
     }
+
     &--p3 {
       left: 10%;
       top: -2rem;
@@ -29,6 +32,8 @@
       box-shadow: 0 2.5rem 4rem rgba($color-black, $alpha: 0.5);
       // display: block;.
       z-index: 1;
+
+
     }
   }
 
