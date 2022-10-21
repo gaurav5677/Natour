@@ -237,22 +237,23 @@ body {
     font-size: 2rem;
     background-color: orangered;
     height: 50rem;
-    transition: all 1.3s ease;
+    transition: all 1s ease;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    backface-visibility: hidden; }
+    backface-visibility: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
     .card__site--front {
       background-color: white; }
     .card__site--back {
       transform: rotateY(180deg); }
       .card__site--back--1 {
         background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
-    .card__site:hover .card__site__site--front {
-      transform: rotateY(180deg); }
-    .card__site:hover .card__site__site--back {
-      transform: rotateY(0deg); }
+  .card:hover .card__site--front {
+    transform: rotateY(-180deg); }
+  .card:hover .card__site--back {
+    transform: rotateY(0deg); }
 
 .row {
   width: 114rem;

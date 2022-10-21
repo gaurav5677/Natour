@@ -7,6 +7,9 @@
     margin-bottom: $gutter-vertical;
   }
 
+
+  
+
   @include clearfix;
 
   // this is the unique attribute selector with which we call select all the col without creating a seperate class

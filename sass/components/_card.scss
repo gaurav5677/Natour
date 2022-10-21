@@ -11,12 +11,13 @@
     background-color: orangered;
 
     height: 50rem;
-    transition: all 1.3s ease;
+    transition: all 1s ease;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     backface-visibility: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, $alpha: .15);
 
     &--front {
 
@@ -30,21 +31,16 @@
       &--1 {
         background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
       }
-
-
-
     }
+  }
+  &:hover &__site--front {
+    transform: rotateY(-180deg);
+
+  }
+
+  &:hover &__site--back {
+    transform: rotateY(0deg);
 
 
-    &:hover &__site--front {
-      transform: rotateY(180deg);
-
-    }
-
-    &:hover &__site--back {
-      transform: rotateY(0deg);
-
-
-    }
   }
 }
