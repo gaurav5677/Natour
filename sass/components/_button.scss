@@ -1,5 +1,5 @@
 .btn {
-
+  &,
   &:link,
   &:visited {
     text-transform: uppercase;
@@ -15,6 +15,9 @@
     /* animation-name: moverInButtom;
     animation-duration:2.3s; */
     /* -o-animation-delay: 3s; */
+    // change for the <button>element
+    border: none;
+    cursor: pointer;
   }
 
   &:hover {
@@ -27,7 +30,8 @@
     }
   }
 
-  &:active {
+  &:active,
+  &:focus {
     transform: translateY(-1px);
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
   }
