@@ -4,8 +4,8 @@ body {
   font-size: 1.6rem;
   line-height: 1.7;
   color: $color-gray-dark;
-  padding: 2rem;
-  
+  // padding: 2rem;
+
 }
 
 
@@ -13,7 +13,9 @@ body {
   color: $color-white;
   text-transform: uppercase;
   backface-visibility: hidden;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
+
+
 
   &--main1 {
     display: block;
@@ -24,62 +26,92 @@ body {
     text-align: center;
     animation-name: moverInLeft;
     animation-duration: 1s;
-    /* animation-timing-function: ease-out; */
+    animation-timing-function: ease-out;
+
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
   }
+
   &--main2 {
     display: block;
 
     font-size: 7rem;
     font-weight: 300;
-    letter-spacing:3rem;
+    letter-spacing: 3rem;
     text-align: center;
     animation-name: moverInLeft;
     animation-duration: 1s;
+
     /* animation-timing-function: ease-out; */
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
+
   }
 
   &--sub {
     display: block;
     font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 1.3rem;
+    letter-spacing: 1.75rem;
     text-align: center;
     animation-name: moverInRight;
     animation-duration: 2s;
+
+    @include respond(phone) {
+      letter-spacing: .5rem;
+
+    }
+
+
   }
 }
 
 
-.heading-secondary{
+.heading-secondary {
   font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
-  background-image: linear-gradient(to right ,$color-primary-dark,$color-primary-light);
+  background-image: linear-gradient(to right, $color-primary-dark, $color-primary-light);
   -webkit-background-clip: text;
   color: transparent;
   transition: all 0.5s;
   letter-spacing: 2px;
-  &:hover{
+
+  @include respond (tab-port) {
+    font-size: 3rem;
+  }
+
+  @include respond (phone) {
+    font-size: 2.5rem;
+  }
+ 
+
+
+  &:hover {
     transform: skewY(2deg) skewX(20deg) scale(1.1);
     text-shadow: .5rem 1rem 2rem rgba($color-black, $alpha: 0.2);
   }
 }
 
-.heading-tertairy{
+.heading-tertairy {
   font-size: $default-font-size;
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.para{
+.para {
   font-size: $default-font-size;
-    
-  &:not(:last-child){
+
+  &:not(:last-child) {
     margin-bottom: 3rem;
 
 
-    
+
   }
 
 }
