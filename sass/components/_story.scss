@@ -3,16 +3,21 @@
   width: 75%;
   margin: 0 auto;
   box-shadow: 0 3rem 6rem rgba($color-black, .1);
-  background-color:rgba($color-white, $alpha: .6);
+  background-color: rgba($color-white, $alpha: .6);
   border-radius: 3px;
   padding: 6rem;
   padding-left: 9rem;
   font-size: $default-font-size;
   transform: skewX(-12deg);
 
+  @include respond(tab-port) {
+    width: 100%;
+    padding: 5rem ;
+    padding-left: 7rem;
+  }
 
-  &>* { 
-    transform: skewX(  12deg);
+  &>* {
+    transform: skewX(12deg);
   }
 
   &__shape {
@@ -24,7 +29,8 @@
     shape-outside: circle(50% at 50% 50%);
 
     clip-path: circle(50% at 50% 50%);
-    transform: translateX(-3rem) skewX(  12deg);; 
+    transform: translateX(-3rem) skewX(12deg);
+    ;
 
   }
 
@@ -34,11 +40,12 @@
     height: 100%;
 
   }
-  &__text{
+
+  &__text {
     transform: skewX(12deg);
   }
 
-  &__caption{
+  &__caption {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -54,15 +61,15 @@
 
   }
 
-  &:hover &__caption{
+  &:hover &__caption {
     opacity: 1;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
   }
 
-  &:hover &__img{
-    
+  &:hover &__img {
+
     transform: scale(1);
-    filter: blur(2px) brightness(80%) ;
+    filter: blur(2px) brightness(80%);
   }
 
 }

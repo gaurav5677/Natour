@@ -3,26 +3,54 @@
 
   &__photo {
     width: 62%;
-    box-shadow: 0 1.5rem 4rem rgba($color-black, $alpha: 0.4);
     border-radius: 5px;
     position: absolute;
 
     transition: all 0.2s;
     outline-offset: 1.5rem;
 
+
+    @include respond(tab-port) {
+
+      float: left;
+      position: relative;
+      width: 33.3333%;
+      box-shadow: 0 1.5rem 2rem rgba($color-black, $alpha: 0.2);
+
+    }
+
     &--p1 {
       left: -5%;
       top: 20rem;
+
+      @include respond(tab-port) {
+        top: 0;
+        left: 2rem;
+        transform: translate( 1.3);
+      }
     }
 
     &--p2 {
       right: 0;
       top: 10rem;
+
+      @include respond(tab-port) {
+        top: -2rem;
+z-index: 100  ;
+        transform: translate( 1.3);
+      }
     }
 
     &--p3 {
       left: 10%;
       top: -2rem;
+
+      @include respond(tab-port) {
+        top: 0rem;
+        left: -1.2rem;
+        transform: translate( 1.3);
+        
+      }
     }
 
     &:hover {
