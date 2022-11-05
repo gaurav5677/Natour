@@ -34,7 +34,16 @@
   &__left {
     width: 33.3333%;
     display: table-cell;
+     
 
+    @include respond(tab-land){
+      width: 38.3333%;
+
+    }
+    @include respond(tab-port){
+      width: 48.3333%;
+
+    }
 
   }
 
@@ -43,7 +52,7 @@
     display: table-cell;
 
     vertical-align: middle;
-    padding: 3rem 5rem;
+    padding: 0rem 3rem;
 
   }
 
@@ -63,6 +72,11 @@
 
     column-rule: 1px solid $color-gray-dark-2;
     hyphens: auto;
+
+    @include respond(tab-port){
+     margin-bottom: 2rem;
+    }
+
   }
 
   &:target {

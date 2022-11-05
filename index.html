@@ -438,8 +438,14 @@
 
   <footer class="footer">
     <div class="footer__logo-box">
-      <img class="footer__logo" src="img/logo-green-2x.png" alt="logo">
-    </div>
+        <picture class="footer__logo">
+          <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" media="(max-width : 37.5em)">
+          <img  class="footer__logo" srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="logo">
+     
+        </picture>
+
+
+     </div>
     <div class="row">
       <div class="col-1-of-2">
         <div class="footer__navigation">
@@ -488,7 +494,7 @@
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero adipisci iste magni ullam minus architecto
           ratione ipsum nisi vitae! Officiis veritatis, porro illum quaerat eveniet molestias sunt esse ducimus quod.
         </p>
-        <a href="#" class="btn btn--green">Book now</a>
+        <a href="#" class="btn btn--green ">Book now</a>
       </div>
     </div>
 
